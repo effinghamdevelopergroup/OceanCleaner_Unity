@@ -19,12 +19,12 @@ public class BoatController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        if (Input.GetAxis("Vertical") > 0)
         {
             Body.AddForce(Vector3.forward, ForceMode.Force);
         }
 
-        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        if (Input.GetAxis("Vertical") < 0)
         {
             Body.AddForce(Vector3.forward * -1, ForceMode.Force);
         }
