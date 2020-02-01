@@ -7,7 +7,8 @@ public class BoatController : MonoBehaviour
 {
     public float Speed;
     public Vector3 Position;
-    public CharacterController Controller;
+
+    public Rigidbody Body;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,16 @@ public class BoatController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        {
+            Body.AddForce(Vector3.forward, ForceMode.Force);
+        }
+
+        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        {
+            Body.AddForce(Vector3.forward * -1, ForceMode.Force);
+        }
+
         if (Input.GetMouseButton(0))
         {
             LocatePosition();
@@ -36,7 +47,6 @@ public class BoatController : MonoBehaviour
             rotation.z = 0f;
 
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime + 10);
-            Controller.SimpleMove(transform.forward * Speed);
         }
     }
 
