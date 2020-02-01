@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,13 +14,17 @@ public class WeightCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MaxWeight = 10000d;
+        GameObject temp = GameObject.Find("WeightBar");
+        WeightBar = temp.GetComponent<Slider>();
+        MaxWeight = 100d;
+        WeightBar.maxValue = (float)MaxWeight;
         CurrentWeight = 10d;
     }
 
     // Update is called once per frame
     void Update()
     {
+        UpdateWeightBar();
         if (Input.GetKeyDown(KeyCode.G))
         {
             PickUpTrash(5);
@@ -31,5 +36,9 @@ public class WeightCounter : MonoBehaviour
         CurrentWeight += weight;
     }
 
-
+    void UpdateWeightBar()
+    {
+        Console.WriteLine((float)CurrentWeight);
+        WeightBar.value = (float)CurrentWeight;
+    }
 }
