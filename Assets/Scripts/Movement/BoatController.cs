@@ -7,7 +7,6 @@ public class BoatController : MonoBehaviour
 {
     public float Speed;
     public Vector3 Position;
-
     public Rigidbody Body;
 
     // Start is called before the first frame update
@@ -21,12 +20,12 @@ public class BoatController : MonoBehaviour
     {
         if (Input.GetAxis("Vertical") > 0)
         {
-            Body.AddForce(Vector3.forward, ForceMode.Force);
+            Body.AddForce(Vector3.forward, ForceMode.Impulse);
         }
 
         if (Input.GetAxis("Vertical") < 0)
         {
-            Body.AddForce(Vector3.forward * -1, ForceMode.Force);
+            Body.AddForce(Vector3.forward * -1, ForceMode.Impulse);
         }
 
         if (Input.GetMouseButton(0))
@@ -34,20 +33,20 @@ public class BoatController : MonoBehaviour
             LocatePosition();
         }
 
-        MoveToPosition();
+        RotateTowardPosition();
     }
 
-    private void MoveToPosition()
+    private void RotateTowardPosition()
     {
-        if(Vector3.Distance(transform.position, Position) > 1)
-        {
+        //if(Vector3.Distance(transform.position, Position) > 1)
+        //{
             Quaternion rotation = Quaternion.LookRotation(Position - transform.position, Vector3.forward);
 
             rotation.x = 0f;
             rotation.z = 0f;
 
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime + 10);
-        }
+        //}
     }
 
     private void LocatePosition()
