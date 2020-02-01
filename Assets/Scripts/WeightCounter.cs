@@ -16,7 +16,7 @@ public class WeightCounter : MonoBehaviour
     {
         GameObject temp = GameObject.Find("WeightBar");
         WeightBar = temp.GetComponent<Slider>();
-        MaxWeight = 100d;
+        MaxWeight = 1000d;
         WeightBar.maxValue = (float)MaxWeight;
         CurrentWeight = 10d;
     }
@@ -25,13 +25,9 @@ public class WeightCounter : MonoBehaviour
     void Update()
     {
         UpdateWeightBar();
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            PickUpTrash(5);
-        }
     }
 
-    void PickUpTrash(double weight)
+    public void PickUpTrash(double weight)
     {
         CurrentWeight += weight;
     }
