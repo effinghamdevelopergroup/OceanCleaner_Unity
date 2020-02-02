@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MainSceneBoatMovement : MonoBehaviour
 {
+    float Speed = 0.2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,6 @@ public class MainSceneBoatMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate((transform.forward * UnityEngine.Time.deltaTime) * Speed);
     }
 }
