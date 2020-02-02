@@ -5,11 +5,8 @@ using UnityEngine.UI;
 
 public class CollisionDetect : MonoBehaviour
 {
-    
-
      void Start()
     {
-
     }
 
     void Update()
@@ -24,6 +21,7 @@ public class CollisionDetect : MonoBehaviour
 
         if (col.gameObject.tag == "pollution")
         {
+            counter.CurrentWeight += 5;
             Destroy(col.gameObject);
         }
     }
