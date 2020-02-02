@@ -11,9 +11,12 @@ public class GameObjectSpawner : MonoBehaviour
     public List<GameObject> ListOfObjectsToSpawn;
     public float TargetTime = 60.0f;
 
+    public WasteCounter wasteCounter;
+
     // Start is called before the first frame update
     void Start()
     {
+        wasteCounter = GameObject.Find("planet").GetComponent<WasteCounter>();
     }
 
     // Update is called once per frame
@@ -34,6 +37,7 @@ public class GameObjectSpawner : MonoBehaviour
                     this.transform.position.y,
                     this.transform.position.z + UnityEngine.Random.Range(MinimumDistance, MaximumDistance));
                 Instantiate(toSpawnGameObject, this.transform);
+                wasteCounter.addWaste(5);
             }
             TargetTime = 60.0f;
         }
