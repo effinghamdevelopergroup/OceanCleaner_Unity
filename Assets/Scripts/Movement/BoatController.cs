@@ -12,7 +12,7 @@ public class BoatController : MonoBehaviour
     public float Decceloration;
     public Vector3 Position;
     public Rigidbody Body;
-    private float CurrentSpeed;
+    public float CurrentSpeed=0;
     public GameObject target;
     public float turnSpeed;
 
