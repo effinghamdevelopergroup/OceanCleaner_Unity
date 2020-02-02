@@ -27,6 +27,7 @@ public class CollisionDetect : MonoBehaviour
             counter.CurrentWeight += 5;
             Destroy(col.gameObject);
             wasteCounter.addWaste(-5);
+            GetComponent<AudioSource>().Play();
         }
     }
 }

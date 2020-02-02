@@ -20,7 +20,7 @@ public class changeScene : MonoBehaviour
     public void ChangeLevel()
     {
         GetComponent<AudioSource>().Play();
-        Thread.Sleep(1000);
+        //Thread.Sleep(1000);
         SceneManager.LoadScene(1);
         
     }
