@@ -2,30 +2,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class WasteCounter : MonoBehaviour
 {
-    public int waste = 0;
-    private SpriteRenderer m_SpriteRenderer;
+    public int waste = 40;
+    Renderer rend;
+    SpriteRenderer sp;
 
-    // Start is called before the first frame update
     void Start()
     {
-        m_SpriteRenderer = GetComponent<SpriteRenderer>();
-        //Set the GameObject's Color quickly to a set Color (blue)
-
+        rend = GetComponent<Renderer>();
+        sp = GetComponent<SpriteRenderer>();
+        rend.material.color = new Color(waste * .006f, 1 - waste * .005f, .9F - waste * .005f);
+        sp.color = new Color(waste * .006f, 1 - waste * .005f, .9F - waste * .005f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (waste > 190)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 
     internal void addWaste(int v)
     {
         waste += v;
-        m_SpriteRenderer.color = new Color(waste*.005f, 1, 1);
+        rend.material.color = new Color(waste*.006f, 1-waste * .005f, .9F- waste * .005f);
+        sp.color = new Color(waste * .006f, 1 - waste * .005f, .9F - waste * .005f);
         Debug.Log(waste);
     }
 }

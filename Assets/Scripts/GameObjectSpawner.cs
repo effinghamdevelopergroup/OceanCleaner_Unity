@@ -39,7 +39,7 @@ public class GameObjectSpawner : MonoBehaviour
                 Instantiate(toSpawnGameObject, this.transform);
                 wasteCounter.addWaste(5);
             }
-            TargetTime = 60.0f;
+            TargetTime = 6+UnityEngine.Random.Range(0,20);
         }
     }
 }

@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class CollisionDetect : MonoBehaviour
 {
-     void Start()
+    private WasteCounter wasteCounter;
+
+    void Start()
     {
+        wasteCounter = GameObject.Find("planet").GetComponent<WasteCounter>();
     }
 
     void Update()
@@ -23,6 +26,7 @@ public class CollisionDetect : MonoBehaviour
         {
             counter.CurrentWeight += 5;
             Destroy(col.gameObject);
+            wasteCounter.addWaste(-5);
         }
     }
 }
