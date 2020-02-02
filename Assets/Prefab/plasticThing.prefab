@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3219193190500216594
+--- !u!1 &6476587237981897019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3223107598470900506}
-  - component: {fileID: 3232777837072162748}
-  - component: {fileID: 3240779461045475196}
-  - component: {fileID: 3189300873839143340}
-  - component: {fileID: 5692625949454850666}
+  - component: {fileID: 8050795798271341352}
+  - component: {fileID: 1360415432177387806}
+  - component: {fileID: 4746129678772696551}
+  - component: {fileID: 3080630169395603216}
+  - component: {fileID: 3080630169395603212}
   m_Layer: 0
-  m_Name: Cola Can
-  m_TagString: Untagged
+  m_Name: plasticThing
+  m_TagString: pollution
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3223107598470900506
+--- !u!4 &8050795798271341352
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3219193190500216594}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.9, y: 1.28, z: 14.6}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_GameObject: {fileID: 6476587237981897019}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
+  m_LocalPosition: {x: 18.9, y: 1.21, z: 7.6}
+  m_LocalScale: {x: 73, y: 73, z: 73}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3232777837072162748
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
+--- !u!33 &1360415432177387806
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3219193190500216594}
-  m_Mesh: {fileID: 4300000, guid: 8fa6215b40a260e42a29384b61d80d83, type: 3}
---- !u!23 &3240779461045475196
+  m_GameObject: {fileID: 6476587237981897019}
+  m_Mesh: {fileID: -462981019419857548, guid: f9d2a6d5b9ce2b94e861dab8c4b06bd4, type: 3}
+--- !u!23 &4746129678772696551
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3219193190500216594}
+  m_GameObject: {fileID: 6476587237981897019}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 788e87a22787c7e43a5558c46e187285, type: 2}
+  - {fileID: 670224309865224971, guid: f9d2a6d5b9ce2b94e861dab8c4b06bd4, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,26 +81,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3189300873839143340
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3219193190500216594}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.09494366, y: 0.15346396, z: 0.09029679}
-  m_Center: {x: 0.000000007450581, y: 0.07673198, z: -0.000000007450581}
---- !u!54 &5692625949454850666
+--- !u!54 &3080630169395603216
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3219193190500216594}
+  m_GameObject: {fileID: 6476587237981897019}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -110,3 +97,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &3080630169395603212
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6476587237981897019}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.018
+  m_Center: {x: 0.000100158155, y: 0.004808369, z: -0.0012470982}
