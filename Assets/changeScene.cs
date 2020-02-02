@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class changeScene : MonoBehaviour
@@ -18,7 +19,10 @@ public class changeScene : MonoBehaviour
 
     public void ChangeLevel()
     {
+        GetComponent<AudioSource>().Play();
+        Thread.Sleep(1000);
         SceneManager.LoadScene(1);
+        
     }
 
 }
